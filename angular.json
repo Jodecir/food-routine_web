@@ -1,18 +1,14 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": "1138fba7-1ce3-4283-bac5-5ff59f26d6f8"
+    "analytics": false
   },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "FoodRoutine-Web": {
+    "food-app-admin": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -20,7 +16,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/FoodRoutine-Web",
+            "outputPath": "dist/food-app-admin",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,12 +24,26 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.webmanifest"
             ],
             "styles": [
-              "src/styles.scss"
+              "node_modules/bootstrap/scss/bootstrap.scss",
+              "node_modules/flag-icon-css/sass/flag-icon.scss",
+              "node_modules/ti-icons/css/themify-icons.css",
+              "node_modules/simple-line-icons/scss/simple-line-icons.scss",
+              "src/assets/icon/icofont/css/icofont.css",
+              "node_modules/font-awesome-scss/scss/font-awesome.scss",
+              "node_modules/ng2-toasty/style-bootstrap.css",
+              "node_modules/ng2-toasty/style-default.css",
+              "node_modules/ng2-toasty/style-material.css",
+              "src/assets/css/animate.scss",
+              "src/styles.scss",
+              "src/assets/css/custom.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -43,43 +53,47 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "optimization": true,
+              "optimization": false,
               "outputHashing": "all",
               "sourceMap": false,
+              "extractCss": true,
               "namedChunks": false,
+              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true,
+              "buildOptimizer": false,
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
+                  "maximumWarning": "5mb",
+                  "maximumError": "10mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
+                  "maximumWarning": "10kb",
+                  "maximumError": "12kb"
                 }
-              ]
+              ],
+              "serviceWorker": true,
+              "ngswConfigPath": "ngsw-config.json"
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "FoodRoutine-Web:build"
+            "browserTarget": "food-app-admin:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "FoodRoutine-Web:build:production"
+              "browserTarget": "food-app-admin:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "FoodRoutine-Web:build"
+            "browserTarget": "food-app-admin:build"
           }
         },
         "test": {
@@ -91,10 +105,11 @@
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.webmanifest"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.css"
             ],
             "scripts": []
           }
@@ -116,16 +131,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "FoodRoutine-Web:serve"
+            "devServerTarget": "food-app-admin:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "FoodRoutine-Web:serve:production"
+              "devServerTarget": "food-app-admin:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "FoodRoutine-Web"
+  "defaultProject": "food-app-admin"
 }
