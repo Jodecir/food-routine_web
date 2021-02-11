@@ -1,5 +1,5 @@
-<ngx-spinner type="ball-pulse-sync" color="#ff7f00">
-    <p style="font-size: 20px; color: #ff7f00">{{'Please wait...' | translate}}</p>
+<ngx-spinner type="ball-pulse-sync" color="#7bed8d">
+    <p style="font-size: 20px; color: #7bed8d">{{'Please wait...' | translate}}</p>
 </ngx-spinner>
 <div class="row">
     <div class="col-sm-12">
@@ -8,7 +8,7 @@
     <div class="col-md-12">
         <div class="card">
             <div class="card-body">
-                <h5>{{'All Banners' | translate}} </h5>
+                <h5>{{'All Cities' | translate}} </h5>
             </div>
 
             <div class="card-body reset-table p-t-0">
@@ -26,8 +26,7 @@
                     <table class="table table-hover">
                         <thead>
                             <tr class="text-uppercase">
-                                <th>{{'Cover' | translate}}</th>
-                                <th>{{'Restaurants' | translate}}</th>
+                                <th>{{'Name' | translate}}</th>
                                 <th>{{'Status' | translate}}</th>
                                 <th>{{'Action' | translate}}</th>
                             </tr>
@@ -55,19 +54,8 @@
                                     border: '1px solid white'
                                     }"></ngx-skeleton-loader>
                                 </td>
-                                <td>
-                                    <ngx-skeleton-loader count="1" [theme]="{ 
-                                    'border-radius': '5px',
-                                    height: '10px',
-                                    border: '1px solid white'
-                                    }"></ngx-skeleton-loader>
-                                </td>
                             </tr>
-                            <tr *ngFor="let item of banners;let i = index">
-                                <td><a href="javascript:;"><img class="img-responsive"
-                                            style="height: 100px;width: 100px;" [src]="item.banner"
-                                            onError="this.src='assets/images/user.png'" alt="chat-user"></a>
-                                </td>
+                            <tr *ngFor="let item of cities;let i = index">
                                 <td>{{item.name}}</td>
                                 <td><button type="button" [className]="getClass(item.status)"
                                         (click)="changeStatus(item)">{{item.status}}</button>

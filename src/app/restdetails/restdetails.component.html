@@ -6,7 +6,7 @@
   <div class="col-md-12">
     <div class="card">
       <div class="card-body">
-        <p style="color: red;font-size: 1.5rem;">
+        <p style="color: green;font-size: 1.5rem;">
           {{'Restaurants will be shown to users once restaurants add foods to his restaurant' | translate}}
         </p>
         <h5> <span *ngIf="new">{{'CREATE NEW' | translate}}</span> <span *ngIf="!new">{{'Edit'| translate}}</span>
@@ -107,10 +107,10 @@
         </div>
         <div class="form-group row">
           <div class="col-sm-12">
-            <button class="btn btn-danger btn-round" (click)="create()"
+            <button class="btn btn-success btn-round" (click)="create()"
               *ngIf="new">{{'Create New Restaurant'| translate}}
             </button>
-            <button class="btn btn-danger btn-round" (click)="updateVenue()" *ngIf="!new">
+            <button class="btn btn-success btn-round" (click)="updateVenue()" *ngIf="!new">
               {{'Update Restaurant'| translate}} </button>
           </div>
         </div>

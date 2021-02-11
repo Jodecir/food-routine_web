@@ -11,7 +11,8 @@
             <i class="ti-menu"></i>
           </a>
           <a [routerLink]="['/']">
-            <img class="img-fluid" src="assets/sidemenu.png" alt="Theme-Logo" />
+            <!-- Colocar Logo -->
+            <img class="img-fluid" src="#" alt="Theme-Logo" />
           </a>
           <a (click)="onMobileMenu()" class="mobile-options">
             <i class="ti-more"></i>
@@ -30,9 +31,15 @@
               <li class="header-notification lng-dropdown">
 
                 <a href="javascript:;" id="dropdown-active-item">
-                  <i class="flag-icon flag-icon-gb m-r-5"></i> English
+                  <i class="flag-icon flag-icon-br m-r-5"></i> Português
                 </a>
                 <ul class="show-notification">
+                  <li>
+                    <a (click)="changeLng('pt')" data-lng="pt">
+                      <i class="flag-icon flag-icon-br m-r-5"></i> Português
+                    </a>
+                  </li>
+
                   <li>
                     <a (click)="changeLng('en')" data-lng="en">
                       <i class="flag-icon flag-icon-gb m-r-5"></i> English
@@ -48,7 +55,7 @@
 
               <li class="user-profile header-notification">
                 <a [routerLink]="['/']">
-                  <img src="assets/images/user.png" alt="User-Profile-Image">
+                  <img src="assets/images/avatar-2.png" alt="User-Profile-Image">
                   <span>Food Admin</span>
                   <i class="ti-angle-down"></i>
                 </a>

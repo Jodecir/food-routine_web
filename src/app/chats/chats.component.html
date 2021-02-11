@@ -11,11 +11,11 @@
                         <input type="text" class="form-control form-control-round"
                             [placeholder]="('Search' | translate) || '&nbsp;'" (input)="search($event.target.value)"
                             style="margin: 10px 0px;">
-                        <div style="border-bottom: 1px solid lightgray;padding: 10px;margin: 10px;background: lightcoral;color: white;"
+                        <div style="border-bottom: 1px solid lightgray;padding: 10px;margin: 10px;background: green;color: white;"
                             *ngIf="selectedId">
                             <div style="display:flex;">
                                 <img class="img-responsive" style="height: 40px;width:40px;border-radius: 50%;"
-                                    [src]="avtar" onError="this.src='assets/images/user.png'" alt="chat-user">
+                                    [src]="avtar" onError="this.src='assets/images/avatar-4.png'" alt="chat-user">
                                 <label style="margin-left: 10px;">{{name}} <br> <span
                                         style="font-size:.6rem;color:white;">{{type}}</span>
                                 </label>
@@ -26,10 +26,10 @@
                             (click)="chatUser(item)" [id]="item.uid">
                             <div style="display:flex;align-items: center;" *ngIf="item.type =='user'">
                                 <img class="img-responsive" style="height: 40px;width:40px;border-radius: 50%;"
-                                    [src]="item.cover" onError="this.src='assets/images/user.png'" alt="chat-user">
+                                    [src]="item.cover" onError="this.src='assets/images/avatar-4.png'" alt="chat-user">
                                 <label style="margin-left: 10px;">{{item.fullname}} <br> <span
                                         style="font-size:.6rem;color:gray;">{{'User' | translate}}</span> </label>
-                                <p *ngIf="item.count" style="background: #ff384c;
+                                <p *ngIf="item.count" style="background: #ff7f00;
                                 color: white;
                                 height: 25px;
                                 width: 25px;
@@ -39,11 +39,11 @@
                             </div>
                             <div style="display:flex;" *ngIf="item.type =='delivery'">
                                 <img class="img-responsive" style="height: 40px;width:40px;border-radius: 50%;"
-                                    [src]="item.coverImage" onError="this.src='assets/images/user.png'" alt="chat-user">
+                                    [src]="item.coverImage" onError="this.src='assets/images/avatar-4.png'" alt="chat-user">
                                 <label style="margin-left: 10px;">{{item.fullname}} <br> <span
                                         style="font-size:.6rem;color:gray;">{{'Drivers' | translate}}</span>
                                 </label>
-                                <p *ngIf="item.count" style="background: #ff384c;
+                                <p *ngIf="item.count" style="background: #ff7f00;
                                     color: white;
                                     height: 25px;
                                     width: 25px;
@@ -54,12 +54,12 @@
                             </div>
                             <div style="display:flex;" *ngIf="item.type =='venue'">
                                 <img class="img-responsive" style="height: 40px;width:40px;border-radius: 50%;"
-                                    src="assets/images/user.png" onError="this.src='assets/images/user.png'"
+                                    src="assets/images/avatar-4.png" onError="this.src='assets/images/avatar-4.png'"
                                     alt="chat-user">
                                 <label style="margin-left: 10px;">{{item.fname}} {{item.lname}}
                                     <br><span style="font-size:.6rem;color:gray;">{{'Restaurant' | translate}}</span>
                                 </label>
-                                <p *ngIf="item.count" style="background: #ff384c;
+                                <p *ngIf="item.count" style="background: #ff7f00;
                                     color: white;
                                     height: 25px;
                                     width: 25px;
@@ -97,7 +97,7 @@
                             *ngIf="id">
                             <input type="text" [(ngModel)]="message" class="form-control form-control-round"
                                 (keydown.enter)="send()" [placeholder]="('Send Message' | translate) || '&nbsp;'">
-                            <button style="margin-left: 10px;" (click)="send()" class="btn btn-danger btn-icon"><i
+                            <button style="margin-left: 10px;" (click)="send()" class="btn btn-success btn-icon"><i
                                     class="icofont icofont-location-arrow"></i></button>
                         </div>
                     </div>

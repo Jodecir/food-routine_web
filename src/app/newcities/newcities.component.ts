@@ -69,10 +69,10 @@ export class NewcitiesComponent implements OnInit {
 
   create() {
 
-    if (!this.city || this.city === '' || !this.lat || !this.lng) {
-      this.error(this.api.translate('Please select valid city name'));
-      return false;
-    }
+    // if (!this.city || this.city === '' || !this.lat || !this.lng) {
+    //   this.error(this.api.translate('Please select valid city name'));
+    //   return false;
+    // }
     const id = Math.floor(100000000 + Math.random() * 900000000);
     const param = {
       name: this.city,

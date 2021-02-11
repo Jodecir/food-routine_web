@@ -115,11 +115,11 @@ const routes: Routes = [
         loadChildren: () => import('./orderdetails/orderdetails.module').then(m => m.OrderdetailsModule),
         canActivate: [AuthGuard]
       },
-      // {
-      //   path: 'admin-cities',
-      //   loadChildren: () => import('./cities/cities.module').then(m => m.CitiesModule),
-      //   canActivate: [AuthGuard]
-      // }, 
+      {
+        path: 'admin-cities',
+        loadChildren: () => import('./cities/cities.module').then(m => m.CitiesModule),
+        canActivate: [AuthGuard]
+      }, 
       {
         path: 'admin-newcities',
         loadChildren: () => import('./newcities/newcities.module').then(m => m.NewcitiesModule),
