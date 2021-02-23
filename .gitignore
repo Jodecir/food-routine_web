@@ -22,7 +22,7 @@ Thumbs.db
 *.zip
 
 /storage
-
+.env
 .phpunit.result.cache
 Homestead.json
 Homestead.yaml
