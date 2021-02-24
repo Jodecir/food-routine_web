@@ -10,19 +10,10 @@
 Thumbs.db
 
 /node_modules
-/public/hot
-/public/storage
-/public/zip/
-/public/images/
-/public/images/media/
-/storage
-!/vendor/rehan/
 /vendor
 /updates
 *.zip
 
-/storage
-.env
 .phpunit.result.cache
 Homestead.json
 Homestead.yaml
