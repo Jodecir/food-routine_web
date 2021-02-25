@@ -1230,14 +1230,14 @@ a:focus {
  color:#f39c12
 }
 .form-group.has-error label {
- color:#dd4b39
+ color:#ffcc00
 }
 .form-group.has-error .form-control {
- border-color:#dd4b39;
+ border-color:#ffcc00;
  box-shadow:none
 }
 .form-group.has-error .help-block {
- color:#dd4b39
+ color:#ffcc00
 }
 .input-group .input-group-addon {
  border-radius:0;
@@ -1380,7 +1380,7 @@ a:focus {
 }
 .progress-bar-red,
 .progress-bar-danger {
- background-color:#dd4b39
+ background-color:#ffcc00
 }
 .progress-striped .progress-bar-red,
 .progress-striped .progress-bar-danger {
@@ -1478,7 +1478,7 @@ a:focus {
  border-top-color:#00c0ef
 }
 .box.box-danger {
- border-top-color:#dd4b39
+ border-top-color:#ffcc00
 }
 .box.box-warning {
  border-top-color:#f39c12
@@ -1557,12 +1557,12 @@ a:focus {
  color:#fff
 }
 .box.box-solid.box-danger {
- border:1px solid #dd4b39
+ border:1px solid #ffcc00
 }
 .box.box-solid.box-danger>.box-header {
  color:#fff;
- background:#dd4b39;
- background-color:#dd4b39
+ background:#ffcc00;
+ background-color:#ffcc00
 }
 .box.box-solid.box-danger>.box-header a,
 .box.box-solid.box-danger>.box-header .btn {
@@ -1826,7 +1826,7 @@ a:focus {
 .todo-list>li .tools {
  display:none;
  float:right;
- color:#dd4b39
+ color:#ffcc00
 }
 .todo-list>li .tools>.fa,
 .todo-list>li .tools>.glyphicon,
@@ -1848,7 +1848,7 @@ a:focus {
  background:#d2d6de !important
 }
 .todo-list .danger {
- border-left-color:#dd4b39
+ border-left-color:#ffcc00
 }
 .todo-list .warning {
  border-left-color:#f39c12
@@ -1891,7 +1891,7 @@ a:focus {
  border:2px solid #00a65a
 }
 .chat .item>.offline {
- border:2px solid #dd4b39
+ border:2px solid #ffcc00
 }
 .chat .item>.message {
  margin-left:55px;
@@ -2176,7 +2176,7 @@ a:focus {
  background-color:#00acd6
 }
 .btn-danger {
- background-color:#dd4b39;
+ background-color:#ffcc00;
  border-color:#d73925
 }
 .btn-danger:hover,
@@ -2465,7 +2465,7 @@ a:focus {
  border-top-color:#00c0ef
 }
 .nav-tabs-custom.tab-danger>.nav-tabs>li.active {
- border-top-color:#dd4b39
+ border-top-color:#ffcc00
 }
 .nav-tabs-custom.tab-warning>.nav-tabs>li.active {
  border-top-color:#f39c12
@@ -2748,13 +2748,13 @@ table.text-center th {
  color:#999
 }
 .direct-chat-danger .right>.direct-chat-text {
- background:#dd4b39;
- border-color:#dd4b39;
+ background:#ffcc00;
+ border-color:#ffcc00;
  color:#fff
 }
 .direct-chat-danger .right>.direct-chat-text:after,
 .direct-chat-danger .right>.direct-chat-text:before {
- border-left-color:#dd4b39
+ border-left-color:#ffcc00
 }
 .direct-chat-primary .right>.direct-chat-text {
  background:#3c8dbc;
@@ -3511,7 +3511,7 @@ table.text-center th {
 }
 .btn-google {
  color:#fff;
- background-color:#dd4b39;
+ background-color:#ffcc00;
  border-color:rgba(0,0,0,0.2)
 }
 .btn-google:focus,
@@ -3538,7 +3538,7 @@ table.text-center th {
  background-image:none
 }
 .btn-google .badge {
- color:#dd4b39;
+ color:#ffcc00;
  background-color:#fff
 }
 .btn-instagram {
@@ -4219,7 +4219,7 @@ table.text-center th {
 .alert-error,
 .label-danger,
 .modal-danger .modal-body {
- background-color:#dd4b39 !important
+ background-color:#ffcc00 !important
 }
 .bg-yellow,
 .callout.callout-warning,
@@ -4338,7 +4338,7 @@ table.text-center th {
  filter:alpha(opacity=65)
 }
 .text-red {
- color:#dd4b39 !important
+ color:#ffcc00 !important
 }
 .text-yellow {
  color:#f39c12 !important
@@ -4510,12 +4510,12 @@ table.text-center th {
  color:#fff
 }
 .bg-red-gradient {
- background:#dd4b39 !important;
- background:-webkit-gradient(linear, left bottom, left top, color-stop(0, #dd4b39), color-stop(1, #e47365)) !important;
- background:-ms-linear-gradient(bottom, #dd4b39, #e47365) !important;
- background:-moz-linear-gradient(center bottom, #dd4b39 0, #e47365 100%) !important;
- background:-o-linear-gradient(#e47365, #dd4b39) !important;
- filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e47365', endColorstr='#dd4b39', GradientType=0) !important;
+ background:#ffcc00 !important;
+ background:-webkit-gradient(linear, left bottom, left top, color-stop(0, #ffcc00), color-stop(1, #e47365)) !important;
+ background:-ms-linear-gradient(bottom, #ffcc00, #e47365) !important;
+ background:-moz-linear-gradient(center bottom, #ffcc00 0, #e47365 100%) !important;
+ background:-o-linear-gradient(#e47365, #ffcc00) !important;
+ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e47365', endColorstr='#ffcc00', GradientType=0) !important;
  color:#fff
 }
 .bg-black-gradient {
