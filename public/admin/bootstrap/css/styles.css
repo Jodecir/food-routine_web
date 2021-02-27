@@ -98,19 +98,15 @@ p#current_stocks {
     margin: 0;
 }
 
-
-
 .android-hide{
 /*		display: none !important;*/
 }
 .ionic-hide{
-		display: none !important;
+		display: none
 }
 .login-logo img{
     width: auto;
-    position: relative !important;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    position: relative
 }
 .comming-soon {
     width: 100%;
