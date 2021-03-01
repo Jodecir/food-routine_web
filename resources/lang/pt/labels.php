@@ -1666,6 +1666,7 @@ return [
 	'AddOptionEmptyErrorText'=>'Please choose option with value.',
 	'Total Money'=>'Total Purchased Money',
 	'Total Money Earned'=>'Total Sale',
+	'Total Kcal Consumed'=>'Kcal Total Consumida',
 	'Print'=>'Print',
 	'Are you sure you want to cancel this order?'=>'Are you sure you want to cancel this order?',
 
