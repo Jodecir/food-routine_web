@@ -34,7 +34,7 @@
 				<!-- small box -->
 				<div class="small-box bg-teal">
 					<div class="inner">
-						<h3>@if(!empty($result['commonContent']['currency']->symbol_left)) {{$result['commonContent']['currency']->symbol_left}} @endif {{ $result['profit'] }} @if(!empty($result['commonContent']['currency']->symbol_right)) {{$result['commonContent']['currency']->symbol_right}} @endif</h3>
+						<h3>@if(!empty($result['commonContent']->symbol_left)) {{$result['commonContent']->symbol_left}} @endif {{ $result['profit'] }} @if(!empty($result['commonContent']->symbol_right)) {{$result['commonContent']->symbol_right}} @endif</h3>
 						<p>{{ trans('labels.Total Kcal Consumed') }}</p>
 					</div>
 					<div class="icon">
