@@ -204,6 +204,7 @@ return [
 	'title_dashboard' => 'Dashboard',
 	'dashboard_Version' => 'Version',
 	'viewAllOrders' => 'View All Orders',
+	'viewAllMeals' => 'View All Meals',
 	'outOfStock' => 'Out of Stock',
 	'customerRegistrations' => 'Customer Registrations',
 	'viewAllCustomers' => 'View All Customers',
