@@ -119,14 +119,16 @@
 										<li class="{{ Request::is('admin/dashboard/last_month') ? 'active' : '' }}"><a href="{{ url('admin/dashboard/last_month')}}">{{ trans('labels.LastMonth') }}</a></li>
 										<li class="{{ Request::is('admin/dashboard/this_month') ? 'active' : '' }}"><a href="{{ url('admin/dashboard/this_month')}}">{{ trans('labels.thisMonth') }}</a></li>
 										<li style="width: 33%"><a href="#" data-toggle="tab">
-														<div class="input-group ">
-																<div class="input-group-btn">
-																		<button type="button" class="btn btn-default" aria-label="Help">{{ trans('labels.custom') }}</button>
-																</div>
-																<input class="form-control reservation dateRange" readonly value="" name="dateRange" aria-label="Text input with multiple buttons ">
-																<div class="input-group-btn"><button type="button" class="btn btn-primary getRange" >{{ trans('labels.go') }}</button> </div>
-														</div>
-												</a></li>
+                      <div class="input-group ">
+                          <div class="input-group-btn">
+                              <button type="button" class="btn btn-default" aria-label="Help">{{ trans('labels.custom') }}</button>
+                          </div>
+                          <input class="form-control reservation dateRange" readonly value="" name="dateRange" aria-label="Text input with multiple buttons ">
+                          <div class="input-group-btn">
+                            <button type="button" class="btn btn-primary getRange" >{{ trans('labels.go') }}</button>
+                          </div>
+                      </div></a>
+                    </li>
 								</ul>
 								<div class="tab-content">
 										<div class="active tab-pane" id="activity">
@@ -313,51 +315,45 @@
 											<table class="table no-margin">
 													<thead>
 													<tr>
-															<th>{{ trans('labels.OrderID') }}</th>
-															<th>{{ trans('labels.CustomerName') }}</th>
-															<th>{{ trans('labels.TotalPrice') }}</th>
-															<th>{{ trans('labels.Status') }} </th>
+                            <th>{{ trans('labels.OrderID') }}</th>
+                            <th>{{ trans('labels.CustomerName') }}</th>
+                            <th>{{ trans('labels.TotalPrice') }}</th>
+                            <th>{{ trans('labels.Status') }} </th>
 													</tr>
 													</thead>
 													<tbody>
 													@if(count($result['orders'])>0)
-															@foreach($result['orders'] as $total_orders)
-																	@foreach($total_orders as $key=>$orders)
-																			@if($key<=10)
-																					<tr>
-																							<td><a href="{{ URL::to('admin/orders/vieworder/') }}/{{ $orders->orders_id }}" data-toggle="tooltip" data-placement="bottom" title="Go to detail">{{ $orders->orders_id }}</a></td>
-																							<td>{{ $orders->customers_name }}</td>
-																							<td>
-																									@if(!empty($result['commonContent']['currency']->symbol_left)) {{$result['commonContent']['currency']->symbol_left}} @endif {{ floatval($orders->total_price) }} @if(!empty($result['commonContent']['currency']->symbol_right)) {{$result['commonContent']['currency']->symbol_right}} @endif
-																							</td>
-																							<td>
-																									@if($orders->orders_status_id==1)
-																											<span class="label label-warning"></span>
-									@elseif($orders->orders_status_id==2)
-																												<span class="label label-success">
-									@elseif($orders->orders_status_id==3)
-																											</span>  <span class="label label-danger"></span>
-									@else
-																												<span class="label label-primary">
-									@endif
-																																									{{ $orders->orders_status }}
-												</span>
-
-
-																							</td>
-																					</tr>
-																			@endif
-																	@endforeach
-															@endforeach
-
+                            @foreach($result['orders'] as $total_orders)
+                              @foreach($total_orders as $key=>$orders)
+                                @if($key<=10)
+                                  <tr>
+                                    <td><a href="{{ URL::to('admin/orders/vieworder/') }}/{{ $orders->orders_id }}" data-toggle="tooltip" data-placement="bottom" title="Go to detail">{{ $orders->orders_id }}</a></td>
+                                    <td>{{ $orders->customers_name }}</td>
+                                    <td>
+                                        @if(!empty($result['commonContent']['currency']->symbol_left)) {{$result['commonContent']['currency']->symbol_left}} @endif {{ floatval($orders->total_price) }} @if(!empty($result['commonContent']['currency']->symbol_right)) {{$result['commonContent']['currency']->symbol_right}} @endif
+                                    </td>
+                                    <td>
+                                      @if($orders->orders_status_id==1)
+                                      <span class="label label-warning"></span>
+                                      @elseif($orders->orders_status_id==2)
+                                      <span class="label label-success">
+                                      @elseif($orders->orders_status_id==3)
+                                      </span>  <span class="label label-danger"></span>
+                                      @else
+                                      <span class="label label-primary">
+                                      @endif
+                                      {{ $orders->orders_status }}
+                                      </span>
+                                    </td>
+                                  </tr>
+                                @endif
+                              @endforeach
+                            @endforeach
 													@else
-															<tr>
-																	<td colspan="4">{{ trans('labels.noOrderPlaced') }}</td>
-
-															</tr>
+                          <tr>
+                            <td colspan="4">{{ trans('labels.noOrderPlaced') }}</td>
+                          </tr>
 													@endif
-
-
 													</tbody>
 											</table>
 									</div>
@@ -375,89 +371,87 @@
 			<!-- /.col -->
 
 			<div class="col-md-4">
+        <!-- PRODUCT LIST -->
+        <div class="box box-primary">
+            <div class="box-header with-border">
+                <h3 class="box-title">{{ trans('labels.GoalCompletion') }}</h3>
 
-					<!-- PRODUCT LIST -->
-
-					<div class="box box-primary">
-							<div class="box-header with-border">
-									<h3 class="box-title">{{ trans('labels.GoalCompletion') }}</h3>
-
-									<div class="box-tools pull-right">
-											<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-											</button>
-											<button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-									</div>
-							</div>
-							<!-- /.box-header -->
-							<div class="box-body">
-							
-									<!-- /.progress-group -->
-									@if($result['total_orders']>0)
-											<div class="progress-group">
-													<span class="progress-text">{{ trans('labels.CompleteOrders') }}</span>
-													<span class="progress-number"><b>{{ $result['compeleted_orders'] }}</b>/{{ $result['total_orders'] }}</span>
-													<div class="progress sm">
-															<div class="progress-bar progress-bar-green" style="width: {{ $result['compeleted_orders']*100/$result['total_orders'] }}%"></div>
-													</div>
-											</div>
-									@endif
-									@if($result['total_orders']>0)
-									<!-- /.progress-group -->
-											<div class="progress-group">
-													<span class="progress-text">{{ trans('labels.PendingOrders') }}</span>
-													<span class="progress-number"><b>{{ $result['pending_orders'] }}</b>/{{ $result['total_orders'] }}</span>
-													<div class="progress sm">
-															<div class="progress-bar progress-bar-yellow" style="width: {{ $result['pending_orders']*100/$result['total_orders'] }}%"></div>
-													</div>
-											</div>
-									@endif
-							<!-- /.progress-group -->
-									@if($result['total_orders']>0)
-											<div class="progress-group">
-													<span class="progress-text">{{ trans('labels.InprocessOrders') }}</span>
-													<span class="progress-number"><b>{{ $result['inprocess'] }}</b>/{{ $result['total_orders'] }}</span>
-													<div class="progress sm">
-															<div class="progress-bar progress-bar-red" style="width: {{ $result['inprocess']*100/$result['total_orders'] }}%"></div>
-													</div>
-											</div>
-									@endif
-							</div>
-							<!-- /.box-body -->
-					</div>
-					<div class="box box-primary">
-							<div class="box-header with-border">
-									<h3 class="box-title">{{ trans('labels.RecentlyAddedProducts') }}</h3>
-									<div class="box-tools pull-right">
-											<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-											</button>
-											<button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-									</div>
-							</div>
-							<!-- /.box-header -->
-							<div class="box-body">
-									<ul class="products-list product-list-in-box">
-											@foreach($result['recentProducts'] as $recentProducts)
-													<li class="item">
-															<div class="product-img">
-																	<img src="{{asset('').$recentProducts->products_image}}" alt="" width=" 100px" height="100px">
-															</div>
-															<div class="product-info">
-																	<a href="{{ URL::to('admin/products/edit') }}/{{ $recentProducts->products_id }}" class="product-title">{{ $recentProducts->products_name }}
-																			<span class="label label-warning label-succes pull-right">
-																					@if(!empty($result['commonContent']['currency']->symbol_left)) {{$result['commonContent']['currency']->symbol_left}} @endif {{ floatval($recentProducts->products_price) }} @if(!empty($result['commonContent']['currency']->symbol_right)) {{$result['commonContent']['currency']->symbol_right}} @endif
-																					</span></a>
-															</div>
-													</li>
-											@endforeach
-									</ul>
-							</div>
-							<!-- /.box-body -->
-							<div class="box-footer text-center">
-									<a href="{{ URL::to('admin/products/display') }}" class="uppercase" data-toggle="tooltip" data-placement="bottom" title="View All Products">{{ trans('labels.viewAllProducts') }}</a>
-							</div>
-							<!-- /.box-footer -->
-					</div>
-					<!-- /.box -->
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                </div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+            
+                <!-- /.progress-group -->
+                @if($result['total_orders']>0)
+                    <div class="progress-group">
+                        <span class="progress-text">{{ trans('labels.CompleteOrders') }}</span>
+                        <span class="progress-number"><b>{{ $result['compeleted_orders'] }}</b>/{{ $result['total_orders'] }}</span>
+                        <div class="progress sm">
+                            <div class="progress-bar progress-bar-green" style="width: {{ $result['compeleted_orders']*100/$result['total_orders'] }}%"></div>
+                        </div>
+                    </div>
+                @endif
+                @if($result['total_orders']>0)
+                <!-- /.progress-group -->
+                    <div class="progress-group">
+                        <span class="progress-text">{{ trans('labels.PendingOrders') }}</span>
+                        <span class="progress-number"><b>{{ $result['pending_orders'] }}</b>/{{ $result['total_orders'] }}</span>
+                        <div class="progress sm">
+                            <div class="progress-bar progress-bar-yellow" style="width: {{ $result['pending_orders']*100/$result['total_orders'] }}%"></div>
+                        </div>
+                    </div>
+                @endif
+            <!-- /.progress-group -->
+                @if($result['total_orders']>0)
+                    <div class="progress-group">
+                        <span class="progress-text">{{ trans('labels.InprocessOrders') }}</span>
+                        <span class="progress-number"><b>{{ $result['inprocess'] }}</b>/{{ $result['total_orders'] }}</span>
+                        <div class="progress sm">
+                            <div class="progress-bar progress-bar-red" style="width: {{ $result['inprocess']*100/$result['total_orders'] }}%"></div>
+                        </div>
+                    </div>
+                @endif
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <div class="box box-primary">
+            <div class="box-header with-border">
+                <h3 class="box-title">{{ trans('labels.RecentlyAddedProducts') }}</h3>
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                </div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <ul class="products-list product-list-in-box">
+                    @foreach($result['recentProducts'] as $recentProducts)
+                        <li class="item">
+                            <div class="product-img">
+                                <img src="{{asset('').$recentProducts->products_image}}" alt="" width=" 100px" height="100px">
+                            </div>
+                            <div class="product-info">
+                                <a href="{{ URL::to('admin/products/edit') }}/{{ $recentProducts->products_id }}" class="product-title">{{ $recentProducts->products_name }}
+                                    <span class="label label-warning label-succes pull-right">
+                                        @if(!empty($result['commonContent']['currency']->symbol_left)) {{$result['commonContent']['currency']->symbol_left}} @endif {{ floatval($recentProducts->products_price) }} @if(!empty($result['commonContent']['currency']->symbol_right)) {{$result['commonContent']['currency']->symbol_right}} @endif
+                                        </span></a>
+                            </div>
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer text-center">
+                <a href="{{ URL::to('admin/products/display') }}" class="uppercase" data-toggle="tooltip" data-placement="bottom" title="View All Products">{{ trans('labels.viewAllProducts') }}</a>
+            </div>
+            <!-- /.box-footer -->
+        </div>
+        <!-- /.box -->
 			</div>
 			<!-- /.col -->
 		</div>
