@@ -38,7 +38,7 @@
 						<p>{{ trans('labels.Total Kcal Consumed') }}</p>
 					</div>
 					<div class="icon">
-						<i class="ion ion-bag"></i>
+						<i class="ion ion-flash"></i>
 					</div>
 					<a href="{{ URL::to('admin/orders/display')}}" class="small-box-footer" data-toggle="tooltip" data-placement="bottom" title="{{ trans('labels.viewAllMeals') }}">{{ trans('labels.viewAllMeals') }} <i class="fa fa-arrow-circle-right"></i></a>
 				</div>
