@@ -147,9 +147,6 @@
             <div class="col-12">
               <div class="footer-info">
                 <p> ©&nbsp;@lang('website.Copy Rights'), Todos os Direitos Reservados
-                  <a href="{{url('/page?name=refund-policy')}}">@lang('website.Privacy')</a>
-                  &nbsp;•&nbsp;
-                  <a href="{{url('/page?name=term-services')}}">@lang('website.Terms')</a>
                 </p>
               </div>
             </div>
