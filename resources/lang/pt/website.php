@@ -120,8 +120,7 @@ return [
 
 	'Email'=>'Email',
 
-	'Copy Rights'=>date('Y',time()).' Company, Inc',
-
+	'Copy Rights'=>date('Y',time()).' Food-Routine Inc',
 
 	'View All News'=>'View All News',
 
