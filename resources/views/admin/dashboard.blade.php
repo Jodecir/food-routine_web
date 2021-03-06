@@ -45,7 +45,20 @@
 			</div>
 			<!-- ./col -->
 			<div class="col-lg-4 col-xs-6">
-
+				<!-- small box -->
+				<div class="small-box bg-light-blue">
+					<div class="inner">
+					<h3>{{$result['compeleted_orders']}}</h3>
+						<p>{{ trans('labels.CompletedMeals') }}</p>
+					</div>
+					<div class="icon">
+						<i class="ion ion-pizza"></i>
+					</div>
+					<a href="{{ URL::to('admin/orders/display')}}" class="small-box-footer" data-toggle="tooltip" data-placement="bottom" title="{{ trans('labels.viewAllMeals') }}">{{ trans('labels.viewAllMeals') }} <i class="fa fa-arrow-circle-right"></i></a>
+				</div>
+			</div>
+			<!-- ./col -->
+			<div class="col-lg-4 col-xs-6">
 				<div class="small-box bg-red">
 					<div class="inner">
 						<h3>{{ $result['outOfStock'] }} </h3>
@@ -87,20 +100,6 @@
 					<a href="{{ URL::to('admin/products/display')}}" class="small-box-footer" data-toggle="tooltip" data-placement="bottom" title="{{ trans('labels.viewAllProducts') }}">{{ trans('labels.viewAllProducts') }} <i class="fa fa-arrow-circle-right"></i></a>
 				</div>
 			</div>
-			
-			<div class="col-lg-4 col-xs-6">
-					<!-- small box -->
-					<div class="small-box bg-light-blue">
-						<div class="inner">
-						<h3>{{$result['compeleted_orders']}}</h3>
-							<p>{{ trans('labels.CompleteOrders') }}</p>
-						</div>
-						<div class="icon">
-							<i class="ion ion-bag"></i>
-						</div>
-						<a href="{{ URL::to('admin/orders/display')}}" class="small-box-footer" data-toggle="tooltip" data-placement="bottom" title="{{ trans('labels.viewAllMeals') }}">{{ trans('labels.viewAllMeals') }} <i class="fa fa-arrow-circle-right"></i></a>
-					</div>
-				</div>
 			<!-- ./col -->
 		</div>
 
@@ -388,7 +387,7 @@
                 <!-- /.progress-group -->
                 @if($result['total_orders']>0)
                     <div class="progress-group">
-                        <span class="progress-text">{{ trans('labels.CompleteOrders') }}</span>
+                        <span class="progress-text">{{ trans('labels.CompletedMeals') }}</span>
                         <span class="progress-number"><b>{{ $result['compeleted_orders'] }}</b>/{{ $result['total_orders'] }}</span>
                         <div class="progress sm">
                             <div class="progress-bar progress-bar-green" style="width: {{ $result['compeleted_orders']*100/$result['total_orders'] }}%"></div>
