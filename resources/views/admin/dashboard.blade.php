@@ -107,7 +107,7 @@
 				<div class="col-sm-12">
 						<div class="nav-tabs-custom">
 								<div class="box-header with-border">
-										<h3 class="box-title"> {{ trans('labels.addedSaleReport') }}</h3>
+										<h3 class="box-title"> {{ trans('labels.addedConsumeReport') }}</h3>
 										<div class="box-tools pull-right">
 												<p class="notify-colors"><span class="sold-content" data-toggle="tooltip" data-placement="bottom" title="{{ trans('labels.Apporders') }}"></span> {{ trans('labels.Apporders') }}  <span class="purchased-content" data-toggle="tooltip" data-placement="bottom" title="{{ trans('labels.websiteorders') }}"></span>{{ trans('labels.websiteorders') }} </p>
 										</div>

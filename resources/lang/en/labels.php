@@ -211,6 +211,7 @@ return [
 	'totalProducts' => 'Total Products',
 	'viewAllProducts' => 'View All Products',
 	'addedSaleReport' => 'Added/Sale Report',
+	'addedConsumeReport' => 'Added/Consume Report',
 	'soldProducts' => 'Sold Products',
 	'addedProducts' => 'Added Products',
 	'lastYear' => 'Last Year',
