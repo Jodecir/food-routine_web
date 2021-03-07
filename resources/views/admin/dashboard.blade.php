@@ -23,7 +23,7 @@
 						<p>{{ trans('labels.MealsList') }}</p>
 					</div>
 					<div class="icon">
-						<i class="ion ion-star"></i>
+						<i class="ion ion-pizza"></i>
 					</div>
 					<a href="{{ URL::to('admin/orders/display')}}" class="small-box-footer" data-toggle="tooltip" data-placement="bottom" title="{{ trans('labels.viewAllMeals') }}">{{ trans('labels.viewAllMeals') }} <i class="fa fa-arrow-circle-right"></i></a>
 				</div>
@@ -52,7 +52,7 @@
 						<p>{{ trans('labels.CompletedMeals') }}</p>
 					</div>
 					<div class="icon">
-						<i class="ion ion-pizza"></i>
+						<i class="ion ion-star"></i>
 					</div>
 					<a href="{{ URL::to('admin/orders/display')}}" class="small-box-footer" data-toggle="tooltip" data-placement="bottom" title="{{ trans('labels.viewAllMeals') }}">{{ trans('labels.viewAllMeals') }} <i class="fa fa-arrow-circle-right"></i></a>
 				</div>
