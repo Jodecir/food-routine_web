@@ -20,12 +20,12 @@
 				<div class="small-box bg-aqua">
 					<div class="inner">
 						<h3>{{ $result['total_orders'] }}</h3>
-						<p>{{ trans('labels.NewOrders') }}</p>
+						<p>{{ trans('labels.MealsList') }}</p>
 					</div>
 					<div class="icon">
-						<i class="ion ion-bag"></i>
+						<i class="ion ion-star"></i>
 					</div>
-					<a href="{{ URL::to('admin/orders/display')}}" class="small-box-footer" data-toggle="tooltip" data-placement="bottom" title="{{ trans('labels.NewOrders') }}">{{ trans('labels.NewOrders') }} <i class="fa fa-arrow-circle-right"></i></a>
+					<a href="{{ URL::to('admin/orders/display')}}" class="small-box-footer" data-toggle="tooltip" data-placement="bottom" title="{{ trans('labels.viewAllMeals') }}">{{ trans('labels.viewAllMeals') }} <i class="fa fa-arrow-circle-right"></i></a>
 				</div>
 			</div>
 			<!-- ./col -->
