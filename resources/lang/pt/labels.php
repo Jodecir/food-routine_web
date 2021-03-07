@@ -230,6 +230,7 @@ return [
 	'new_members' => 'New Customer(s)',
 	'no_customer_exist' => 'No customer exist.',
 	'NewOrders' => 'New Orders',
+	'MealsList' => 'Refeições na Lista',
 	'OrderID' => 'Order ID',
 	'CustomerName' => 'Customer Name',
 	'TotalPrice' => 'Total Price',
