@@ -97,7 +97,7 @@
 					<div class="icon">
 						<i class="ion ion-pie-graph"></i>
 					</div>
-					<a href="{{ URL::to('admin/products/display')}}" class="small-box-footer" data-toggle="tooltip" data-placement="bottom" title="{{ trans('labels.viewAllProducts') }}">{{ trans('labels.viewAllProducts') }} <i class="fa fa-arrow-circle-right"></i></a>
+					<a href="{{ URL::to('admin/products/display')}}" class="small-box-footer" data-toggle="tooltip" data-placement="bottom" title="{{ trans('labels.viewAllDishs') }}">{{ trans('labels.viewAllDishs') }} <i class="fa fa-arrow-circle-right"></i></a>
 				</div>
 			</div>
 			<!-- ./col -->
