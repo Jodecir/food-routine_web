@@ -245,6 +245,7 @@ return [
 	'PendingOrders' => 'Pending Orders',
 	'InprocessOrders' => 'Inprocess Orders',
 	'RecentlyAddedProducts' => 'Produtos Adicionados Recente',
+	'RecentlyAddedDishs' => 'Pratos Adicionados Recente',
 
 	//languages / labels
 
