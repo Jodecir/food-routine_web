@@ -244,7 +244,7 @@ return [
 	'CompletedMeals' => 'Refeições Concluídas',
 	'PendingOrders' => 'Pending Orders',
 	'InprocessOrders' => 'Inprocess Orders',
-	'RecentlyAddedProducts' => 'Recently Added Products',
+	'RecentlyAddedProducts' => 'Produtos Adicionados Recente',
 
 	//languages / labels
 
