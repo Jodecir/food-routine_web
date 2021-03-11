@@ -230,7 +230,7 @@ return [
 	'goal_completions' => 'GOAL COMPLETIONS',
 	'latest_customers' => 'New Customer(s)',
 	'new_members' => 'New Customer(s)',
-	'no_customer_exist' => 'No customer exist.',
+	'no_customer_exist' => 'Nenhum cliente cadastrado.',
 	'NewOrders' => 'New Orders',
 	'MealsList' => 'Refeições na Lista',
 	'OrderID' => 'Order ID',
