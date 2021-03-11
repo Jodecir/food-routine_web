@@ -13,97 +13,7 @@
 	
 	<!-- Main content -->
 	<section class="content">
-		@if( $result['commonContent']['roles'] != null and $result['commonContent']['roles']->dashboard_view == 1)
-		<div class="row">
-			<div class="col-lg-4 col-xs-6">
-				<!-- small box -->
-				<div class="small-box bg-aqua">
-					<div class="inner">
-						<h3>{{ $result['total_orders'] }}</h3>
-						<p>{{ trans('labels.MealsList') }}</p>
-					</div>
-					<div class="icon">
-						<i class="ion ion-pizza"></i>
-					</div>
-					<a href="{{ URL::to('admin/orders/display')}}" class="small-box-footer" data-toggle="tooltip" data-placement="bottom" title="{{ trans('labels.viewAllMeals') }}">{{ trans('labels.viewAllMeals') }} <i class="fa fa-arrow-circle-right"></i></a>
-				</div>
-			</div>
-			<!-- ./col -->
-			<!-- ./col -->
-			<div class="col-lg-4 col-xs-6">
-				<!-- small box -->
-				<div class="small-box bg-teal">
-					<div class="inner">
-						<h3>@if(!empty($result['commonContent']->symbol_left)) {{$result['commonContent']->symbol_left}} @endif {{ $result['profit'] }} @if(!empty($result['commonContent']->symbol_right)) {{$result['commonContent']->symbol_right}} @endif</h3>
-						<p>{{ trans('labels.Total Kcal Consumed') }}</p>
-					</div>
-					<div class="icon">
-						<i class="ion ion-flash"></i>
-					</div>
-					<a href="{{ URL::to('admin/orders/display')}}" class="small-box-footer" data-toggle="tooltip" data-placement="bottom" title="{{ trans('labels.viewAllMeals') }}">{{ trans('labels.viewAllMeals') }} <i class="fa fa-arrow-circle-right"></i></a>
-				</div>
-			</div>
-			<!-- ./col -->
-			<div class="col-lg-4 col-xs-6">
-				<!-- small box -->
-				<div class="small-box bg-light-blue">
-					<div class="inner">
-					<h3>{{$result['compeleted_orders']}}</h3>
-						<p>{{ trans('labels.CompletedMeals') }}</p>
-					</div>
-					<div class="icon">
-						<i class="ion ion-star"></i>
-					</div>
-					<a href="{{ URL::to('admin/orders/display')}}" class="small-box-footer" data-toggle="tooltip" data-placement="bottom" title="{{ trans('labels.viewAllMeals') }}">{{ trans('labels.viewAllMeals') }} <i class="fa fa-arrow-circle-right"></i></a>
-				</div>
-			</div>
-			<!-- ./col -->
-			<div class="col-lg-4 col-xs-6">
-				<div class="small-box bg-red">
-					<div class="inner">
-						<h3>{{ $result['outOfStock'] }} </h3>
-						<p>{{ trans('labels.outOfStock') }}</p>
-					</div>
-					<div class="icon">
-						<i class="ion ion-stats-bars"></i>
-					</div>
-					<a href="{{ URL::to('admin/outofstock')}}" class="small-box-footer" data-toggle="tooltip" data-placement="bottom" title="{{ trans('labels.outOfStock') }}">{{ trans('labels.outOfStock') }} <i class="fa fa-arrow-circle-right"></i></a>
-				</div>
-			</div>
-			<!-- ./col -->
-			<div class="col-lg-4 col-xs-6">
-				<!-- small box -->
-				<div class="small-box bg-yellow">
-					<div class="inner">
-						<h3>{{ count($newCustomers) }}</h3>
-
-						<p>{{ trans('labels.customerRegistrations') }}</p>
-					</div>
-					<div class="icon">
-						<i class="ion ion-person-add"></i>
-					</div>
-					<a href="{{ URL::to('admin/customers/display')}}" class="small-box-footer" data-toggle="tooltip" data-placement="bottom" title="{{ trans('labels.viewAllCustomers') }}">{{ trans('labels.viewAllCustomers') }}  <i class="fa fa-arrow-circle-right"></i></a>
-				</div>
-			</div>
-			<!-- ./col -->
-			<div class="col-lg-4 col-xs-6">
-				<!-- small box -->
-				<div class="small-box bg-green">
-					<div class="inner">
-						<h3>{{ $result['totalProducts'] }}</h3>
-
-						<p>{{ trans('labels.totalProducts') }}</p>
-					</div>
-					<div class="icon">
-						<i class="ion ion-pie-graph"></i>
-					</div>
-					<a href="{{ URL::to('admin/products/display')}}" class="small-box-footer" data-toggle="tooltip" data-placement="bottom" title="{{ trans('labels.viewAllDishs') }}">{{ trans('labels.viewAllDishs') }} <i class="fa fa-arrow-circle-right"></i></a>
-				</div>
-			</div>
-			<!-- ./col -->
-		</div>
-
-		<div class="row">
+		@if( $result['commonContent']['roles'] != null and $result['commonContent']['roles']->dashboard_view == 1)<div class="row">
 				<div class="col-sm-12">
 						<div class="nav-tabs-custom">
 								<div class="box-header with-border">
@@ -235,7 +145,95 @@
 				</div>
 				<!-- /.col -->
 		</div>
-		
+		<!-- /end -->
+		<div class="row">
+			<div class="col-lg-4 col-xs-6">
+				<!-- small box -->
+				<div class="small-box bg-aqua">
+					<div class="inner">
+						<h3>{{ $result['total_orders'] }}</h3>
+						<p>{{ trans('labels.MealsList') }}</p>
+					</div>
+					<div class="icon">
+						<i class="ion ion-pizza"></i>
+					</div>
+					<a href="{{ URL::to('admin/orders/display')}}" class="small-box-footer" data-toggle="tooltip" data-placement="bottom" title="{{ trans('labels.viewAllMeals') }}">{{ trans('labels.viewAllMeals') }} <i class="fa fa-arrow-circle-right"></i></a>
+				</div>
+			</div>
+			<!-- ./col -->
+			<!-- ./col -->
+			<div class="col-lg-4 col-xs-6">
+				<!-- small box -->
+				<div class="small-box bg-teal">
+					<div class="inner">
+						<h3>@if(!empty($result['commonContent']->symbol_left)) {{$result['commonContent']->symbol_left}} @endif {{ $result['profit'] }} @if(!empty($result['commonContent']->symbol_right)) {{$result['commonContent']->symbol_right}} @endif</h3>
+						<p>{{ trans('labels.Total Kcal Consumed') }}</p>
+					</div>
+					<div class="icon">
+						<i class="ion ion-flash"></i>
+					</div>
+					<a href="{{ URL::to('admin/orders/display')}}" class="small-box-footer" data-toggle="tooltip" data-placement="bottom" title="{{ trans('labels.viewAllMeals') }}">{{ trans('labels.viewAllMeals') }} <i class="fa fa-arrow-circle-right"></i></a>
+				</div>
+			</div>
+			<!-- ./col -->
+			<div class="col-lg-4 col-xs-6">
+				<!-- small box -->
+				<div class="small-box bg-light-blue">
+					<div class="inner">
+					<h3>{{$result['compeleted_orders']}}</h3>
+						<p>{{ trans('labels.CompletedMeals') }}</p>
+					</div>
+					<div class="icon">
+						<i class="ion ion-star"></i>
+					</div>
+					<a href="{{ URL::to('admin/orders/display')}}" class="small-box-footer" data-toggle="tooltip" data-placement="bottom" title="{{ trans('labels.viewAllMeals') }}">{{ trans('labels.viewAllMeals') }} <i class="fa fa-arrow-circle-right"></i></a>
+				</div>
+			</div>
+			<!-- ./col -->
+			<div class="col-lg-4 col-xs-6">
+				<div class="small-box bg-red">
+					<div class="inner">
+						<h3>{{ $result['outOfStock'] }} </h3>
+						<p>{{ trans('labels.outOfStock') }}</p>
+					</div>
+					<div class="icon">
+						<i class="ion ion-stats-bars"></i>
+					</div>
+					<a href="{{ URL::to('admin/outofstock')}}" class="small-box-footer" data-toggle="tooltip" data-placement="bottom" title="{{ trans('labels.outOfStock') }}">{{ trans('labels.outOfStock') }} <i class="fa fa-arrow-circle-right"></i></a>
+				</div>
+			</div>
+			<!-- ./col -->
+			<div class="col-lg-4 col-xs-6">
+				<!-- small box -->
+				<div class="small-box bg-yellow">
+					<div class="inner">
+						<h3>{{ count($newCustomers) }}</h3>
+
+						<p>{{ trans('labels.customerRegistrations') }}</p>
+					</div>
+					<div class="icon">
+						<i class="ion ion-person-add"></i>
+					</div>
+					<a href="{{ URL::to('admin/customers/display')}}" class="small-box-footer" data-toggle="tooltip" data-placement="bottom" title="{{ trans('labels.viewAllCustomers') }}">{{ trans('labels.viewAllCustomers') }}  <i class="fa fa-arrow-circle-right"></i></a>
+				</div>
+			</div>
+			<!-- ./col -->
+			<div class="col-lg-4 col-xs-6">
+				<!-- small box -->
+				<div class="small-box bg-green">
+					<div class="inner">
+						<h3>{{ $result['totalProducts'] }}</h3>
+
+						<p>{{ trans('labels.totalProducts') }}</p>
+					</div>
+					<div class="icon">
+						<i class="ion ion-pie-graph"></i>
+					</div>
+					<a href="{{ URL::to('admin/products/display')}}" class="small-box-footer" data-toggle="tooltip" data-placement="bottom" title="{{ trans('labels.viewAllDishs') }}">{{ trans('labels.viewAllDishs') }} <i class="fa fa-arrow-circle-right"></i></a>
+				</div>
+			</div>
+			<!-- ./col -->
+		</div>
 
 		<!-- Main row -->
 		<div class="row">
@@ -428,21 +426,22 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-                <ul class="products-list product-list-in-box">
-                    @foreach($result['recentProducts'] as $recentProducts)
-                        <li class="item">
-                            <div class="product-img">
-                                <img src="{{asset('').$recentProducts->products_image}}" alt="" width=" 100px" height="100px">
-                            </div>
-                            <div class="product-info">
-                                <a href="{{ URL::to('admin/products/edit') }}/{{ $recentProducts->products_id }}" class="product-title">{{ $recentProducts->products_name }}
-                                    <span class="label label-warning label-succes pull-right">
-                                        @if(!empty($result['commonContent']['currency']->symbol_left)) {{$result['commonContent']['currency']->symbol_left}} @endif {{ floatval($recentProducts->products_price) }} @if(!empty($result['commonContent']['currency']->symbol_right)) {{$result['commonContent']['currency']->symbol_right}} @endif
-                                        </span></a>
-                            </div>
-                        </li>
-                    @endforeach
-                </ul>
+							<ul class="products-list product-list-in-box">
+								@foreach($result['recentProducts'] as $recentProducts)
+								<li class="item">
+									<div class="product-img">
+											<img src="{{asset('').$recentProducts->products_image}}" alt="" width=" 100px" height="100px">
+									</div>
+									<div class="product-info">
+										<a href="{{ URL::to('admin/products/edit') }}/{{ $recentProducts->products_id }}" class="product-title">{{ $recentProducts->products_name }}
+											<span class="label label-warning label-succes pull-right">
+												@if(!empty($result['commonContent']['currency']->symbol_left)) {{$result['commonContent']['currency']->symbol_left}} @endif {{ floatval($recentProducts->products_price) }} @if(!empty($result['commonContent']['currency']->symbol_right)) {{$result['commonContent']['currency']->symbol_right}} @endif
+											</span>
+										</a>
+									</div>
+								</li>
+								@endforeach
+							</ul>
             </div>
             <!-- /.box-body -->
             <div class="box-footer text-center">
