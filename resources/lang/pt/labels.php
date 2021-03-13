@@ -140,12 +140,12 @@ return [
 
 
 	//login page
-	'login_text' => 'Sign in to start your session',
-	'welcome_message'	 =>	'Welcome',
-	'welcome_message_to'=>'To Admin Panel',
+	'login_text' => 'Entre para iniciar sua sessão',
+	'welcome_message'	 =>	'Bem Vindo',
+	'welcome_message_to'=>' ao Painel do Administrador',
 
 	//header
-    'admin' => 'Admin',
+  'admin' => 'Admin',
 	'profile_link' => 'Profile',
 	'sign_out' => 'Sign out',
 	'toggle_navigation'=>'Toggle navigation',
@@ -552,8 +552,8 @@ return [
 	'Telephone' => 'Telephone',
 	'TelephoneText' => 'Please enter telephone.',
 	'FaxText' => 'Please enter fax.',
-	'EmailText' => 'Please enter email address.',
-	'EmailError' => 'Please enter a valid email address.',
+	'EmailText' => 'Por Favor insira um endereço de email.',
+	'EmailError' => 'Por Favor insira um endereço de email valido.',
 	'EmailAddress' => 'Email Address',
 	'Password' => 'Password',
 	'PasswordText' => 'Please enter password.',
@@ -982,9 +982,9 @@ return [
 	'AdminFirstName' => 'First Name',
 	'AdminFirstNameText' => 'Please enter your first name.',
 	'Success' => 'Success!',
-	'EmailPasswordIncorrectText' => 'Email or password is incorrect!',
-	'AdminEmailText' => 'Please enter your valid email address.',
-	'AdminPasswordText' => 'Please enter your passwrod.',
+	'EmailPasswordIncorrectText' => 'Email ou senha incorreto!',
+	'AdminEmailText' => 'Insira seu endereço de email.',
+	'AdminPasswordText' => 'Insira sua senha.',
 	'Braintree' => 'Braintree',
 	'Stripe' => 'Stripe',
 

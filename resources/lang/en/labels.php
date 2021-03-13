@@ -984,7 +984,7 @@ return [
 	'Success' => 'Success!',
 	'EmailPasswordIncorrectText' => 'Email or password is incorrect!',
 	'AdminEmailText' => 'Please enter your valid email address.',
-	'AdminPasswordText' => 'Please enter your passwrod.',
+	'AdminPasswordText' => 'Please enter your password.',
 	'Braintree' => 'Braintree',
 	'Stripe' => 'Stripe',
 
