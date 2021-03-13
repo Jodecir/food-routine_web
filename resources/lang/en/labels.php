@@ -138,7 +138,6 @@ return [
 	'login'=>'Login',
 	'login_page_name'=>'Login',
 
-
 	//login page
 	'login_text' => 'Sign in to start your session',
 	'welcome_message'	 =>	'Welcome',
@@ -197,6 +196,7 @@ return [
 	'link_order_status' => 'Order Status',
 	'link_setting' => 'Settings',
 	'link_store_setting' => 'Store Settings',
+
 	//common labels
 	'breadcrumb_dashboard'=>'Dashboard',
 
@@ -247,7 +247,6 @@ return [
 	'RecentlyAddedDishs' => 'Recently Added Dishs',
 
 	//languages / labels
-
 	'ListingLanguages' => 'Listing Languages',
 	'EditCurrentLanguage' => 'Edit Current Language',
 	'submit' => 'Submit',
@@ -997,6 +996,7 @@ return [
 	'paypaltext'=>'Enter paypal name.',
 	'paypalIdText' => 'Enter paypal id for transaction.',
 	'paypalId'=>'Paypal ID',
+
 	//newly added
 	'notificationSendMessage' => 'Notification has been successfully',
 	'notificationSendMessageError' => 'Error while sending notifications. Please make sure you have set correct credentials.',
@@ -2406,7 +2406,6 @@ return [
 	'Language icon size should be 30x20'=>'Language icon size should be 30x20',
 	
 	// new labels
-
 	'Choose start and end date'=>'Choose start and end date',
 	'Choose Devlieryboy'=>'Choose Devlieryboy',
 	'Choose Customer'=>'Choose Customer',
