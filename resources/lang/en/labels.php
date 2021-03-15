@@ -235,6 +235,7 @@ return [
 	'OrderID' => 'Order ID',
 	'CustomerName' => 'Customer Name',
 	'TotalPrice' => 'Total Price',
+	'TotalQuantity' => 'Total Quantity',
 	'Status' => 'Status',
 	'noOrderPlaced' => 'Orders are not placed yet.',
 	'GoalCompletion' => 'Goal Completion',

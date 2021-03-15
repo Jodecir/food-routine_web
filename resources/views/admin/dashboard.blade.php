@@ -308,53 +308,53 @@
 							</div>
 							<!-- /.box-header -->
 							<div class="box-body">
-									<div class="table-responsive">
-											<table class="table no-margin">
-													<thead>
-													<tr>
-                            <th>{{ trans('labels.OrderID') }}</th>
-                            <th>{{ trans('labels.CustomerName') }}</th>
-                            <th>{{ trans('labels.TotalPrice') }}</th>
-                            <th>{{ trans('labels.Status') }} </th>
-													</tr>
-													</thead>
-													<tbody>
-													@if(count($result['orders'])>0)
-                            @foreach($result['orders'] as $total_orders)
-                              @foreach($total_orders as $key=>$orders)
-                                @if($key<=10)
-                                  <tr>
-                                    <td><a href="{{ URL::to('admin/orders/vieworder/') }}/{{ $orders->orders_id }}" data-toggle="tooltip" data-placement="bottom" title="Go to detail">{{ $orders->orders_id }}</a></td>
-                                    <td>{{ $orders->customers_name }}</td>
-                                    <td>
-                                        @if(!empty($result['commonContent']['currency']->symbol_left)) {{$result['commonContent']['currency']->symbol_left}} @endif {{ floatval($orders->total_price) }} @if(!empty($result['commonContent']['currency']->symbol_right)) {{$result['commonContent']['currency']->symbol_right}} @endif
-                                    </td>
-                                    <td>
-                                      @if($orders->orders_status_id==1)
-                                      <span class="label label-warning"></span>
-                                      @elseif($orders->orders_status_id==2)
-                                      <span class="label label-success">
-                                      @elseif($orders->orders_status_id==3)
-                                      </span>  <span class="label label-danger"></span>
-                                      @else
-                                      <span class="label label-primary">
-                                      @endif
-                                      {{ $orders->orders_status }}
-                                      </span>
-                                    </td>
-                                  </tr>
-                                @endif
-                              @endforeach
-                            @endforeach
-													@else
-                          <tr>
-                            <td colspan="4">{{ trans('labels.noOrderPlaced') }}</td>
-                          </tr>
+								<div class="table-responsive">
+									<table class="table no-margin">
+										<thead>
+										<tr>
+											<th>{{ trans('labels.OrderID') }}</th>
+											<th>{{ trans('labels.CustomerName') }}</th>
+											<th>{{ trans('labels.TotalQuantity') }}</th>
+											<th>{{ trans('labels.Status') }} </th>
+										</tr>
+										</thead>
+										<tbody>
+										@if(count($result['orders'])>0)
+											@foreach($result['orders'] as $total_orders)
+												@foreach($total_orders as $key=>$orders)
+													@if($key<=10)
+														<tr>
+															<td><a href="{{ URL::to('admin/orders/vieworder/') }}/{{ $orders->orders_id }}" data-toggle="tooltip" data-placement="bottom" title="Go to detail">{{ $orders->orders_id }}</a></td>
+															<td>{{ $orders->customers_name }}</td>
+															<td>
+																	@if(!empty($result['commonContent']['currency']->symbol_left)) {{$result['commonContent']['currency']->symbol_left}} @endif {{ floatval($orders->total_price) }} @if(!empty($result['commonContent']['currency']->symbol_right)) {{$result['commonContent']['currency']->symbol_right}} @endif
+															</td>
+															<td>
+																@if($orders->orders_status_id==1)
+																<span class="label label-warning"></span>
+																@elseif($orders->orders_status_id==2)
+																<span class="label label-success">
+																@elseif($orders->orders_status_id==3)
+																</span>  <span class="label label-danger"></span>
+																@else
+																<span class="label label-primary">
+																@endif
+																{{ $orders->orders_status }}
+																</span>
+															</td>
+														</tr>
 													@endif
-													</tbody>
-											</table>
-									</div>
-									<!-- /.table-responsive -->
+												@endforeach
+											@endforeach
+										@else
+										<tr>
+											<td colspan="4">{{ trans('labels.noOrderPlaced') }}</td>
+										</tr>
+										@endif
+										</tbody>
+									</table>
+								</div>
+								<!-- /.table-responsive -->
 							</div>
 							<!-- /.box-body -->
 							<div class="box-footer clearfix">

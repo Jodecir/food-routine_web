@@ -235,6 +235,7 @@ return [
 	'OrderID' => 'ID do Pedido',
 	'CustomerName' => 'Nome do Cliente',
 	'TotalPrice' => 'Preço Total',
+	'TotalQuantity' => 'Quantidade Total',
 	'Status' => 'Status',
 	'noOrderPlaced' => 'Nenhum pedido foi feito ainda.',
 	'GoalCompletion' => 'Meta de Conclusão',
