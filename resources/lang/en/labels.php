@@ -242,7 +242,9 @@ return [
 	'CompletedOrders' => 'Completed Orders',
 	'CompletedMeals' => 'Completed Meals',
 	'PendingOrders' => 'Pending Orders',
+	'PendingMeals' => 'Pending Meals',
 	'InprocessOrders' => 'Inprocess Orders',
+	'MealsUnderAnalysis' => 'Meals Under Analysis',
 	'RecentlyAddedProducts' => 'Recently Added Products',
 	'RecentlyAddedDishs' => 'Recently Added Dishs',
 
