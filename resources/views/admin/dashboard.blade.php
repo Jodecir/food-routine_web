@@ -395,7 +395,7 @@
                 @if($result['total_orders']>0)
                 <!-- /.progress-group -->
                     <div class="progress-group">
-                        <span class="progress-text">{{ trans('labels.PendingOrders') }}</span>
+                        <span class="progress-text">{{ trans('labels.PendingMeals') }}</span>
                         <span class="progress-number"><b>{{ $result['pending_orders'] }}</b>/{{ $result['total_orders'] }}</span>
                         <div class="progress sm">
                             <div class="progress-bar progress-bar-yellow" style="width: {{ $result['pending_orders']*100/$result['total_orders'] }}%"></div>
