@@ -194,12 +194,12 @@
 				<div class="small-box bg-red">
 					<div class="inner">
 						<h3>{{ $result['outOfStock'] }} </h3>
-						<p>{{ trans('labels.outOfStock') }}</p>
+						<p>{{ trans('labels.outofstock') }}</p>
 					</div>
 					<div class="icon">
 						<i class="ion ion-stats-bars"></i>
 					</div>
-					<a href="{{ URL::to('admin/outofstock')}}" class="small-box-footer" data-toggle="tooltip" data-placement="bottom" title="{{ trans('labels.outOfStock') }}">{{ trans('labels.outOfStock') }} <i class="fa fa-arrow-circle-right"></i></a>
+					<a href="{{ URL::to('admin/outofstock')}}" class="small-box-footer" data-toggle="tooltip" data-placement="bottom" title="{{ trans('labels.outOfStock') }}">{{ trans('labels.viewAllOutOfStock') }} <i class="fa fa-arrow-circle-right"></i></a>
 				</div>
 			</div>
 			<!-- ./col -->

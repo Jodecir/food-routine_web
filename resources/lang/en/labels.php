@@ -205,7 +205,7 @@ return [
 	'dashboard_Version' => 'Version',
 	'viewAllOrders' => 'View All Orders',
 	'viewAllMeals' => 'View All Meals',
-	'outOfStock' => 'Out of Stock',
+	'viewAllOutOfStock' => 'View All Out of Stock',
 	'customerRegistrations' => 'Customer Registrations',
 	'viewAllCustomers' => 'View All Customers',
 	'totalProducts' => 'Total Products',

@@ -205,7 +205,7 @@ return [
 	'dashboard_Version' => 'Version',
 	'viewAllOrders' => 'View All Orders',
 	'viewAllMeals' => 'Visualizar Todas Refeições',
-	'outOfStock' => 'Out of Stock',
+	'viewAllOutOfStock' => 'Visualizar Tudo fora de Estoque',
 	'customerRegistrations' => 'Clientes Registrados',
 	'viewAllCustomers' => 'Visualizar Todos Clientes',
 	'totalProducts' => 'Pratos no Total',
