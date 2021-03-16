@@ -819,6 +819,7 @@ return [
 	'FlateRateSetting' => 'Flate Rate Setting',
 	'FlateRateStatus' => 'Select "Active" status to display this method.',
 	'Currency' => 'Currency',
+	'NutritionalValues' => 'Nutritional Values',
 	'CurrencyText' => 'Enter currency code. i.e: USD',
 	'Rate' => 'Rate',
 	'FlateRateText' => 'This is a fixed rate. Enter only numeric value.',

@@ -52,7 +52,7 @@
 
       <li class="treeview {{ Request::is('admin/currencies/display') ? 'active' : '' }} {{ Request::is('admin/currencies/add') ? 'active' : '' }} {{ Request::is('admin/currencies/edit/*') ? 'active' : '' }} {{ Request::is('admin/currencies/filter') ? 'active' : '' }}">
         <a href="{{ URL::to('admin/currencies/display')}}">
-          <i class="fa fa-circle-o"></i> {{ trans('labels.currency') }}
+          <i class="fa fa-circle-o"></i> {{ trans('labels.NutritionalValues') }}
         </a>
       </li>
       <?php } ?>    
