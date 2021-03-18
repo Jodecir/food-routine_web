@@ -777,7 +777,9 @@ header {
   padding: 10px 0;
   text-transform: uppercase;
 }
-
+#texto{
+	color:#000;
+}
 .order-btn{
   display: inline-block;
   margin-bottom: 10px;
