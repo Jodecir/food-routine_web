@@ -781,7 +781,7 @@ header {
   padding: 10px 0;
   text-transform: uppercase;
 }
-#texto{
+#destaque{
 	color:#000;
 }
 .order-btn{
@@ -863,9 +863,6 @@ header {
 .subscribe .social {
 	margin: auto;
 	display: table;
-}
-.subscribe .social ul {
-	padding:30px 0;
 }
 .subscribe .social li {
 	float: left;
